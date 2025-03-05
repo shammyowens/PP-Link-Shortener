@@ -1,0 +1,425 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Github Connector",
+    "description": "GitHub API Connector which can see repo file content and can update files.",
+    "version": "1.0"
+  },
+  "host": "api.github.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/repos/{owner}/{repo}/contents/{path}": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "description": "type"
+                },
+                "encoding": {
+                  "type": "string",
+                  "description": "encoding"
+                },
+                "size": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "size"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "name"
+                },
+                "path": {
+                  "type": "string",
+                  "description": "path"
+                },
+                "content": {
+                  "type": "string",
+                  "description": "content"
+                },
+                "sha": {
+                  "type": "string",
+                  "description": "sha"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "url"
+                },
+                "git_url": {
+                  "type": "string",
+                  "description": "git_url"
+                },
+                "html_url": {
+                  "type": "string",
+                  "description": "html_url"
+                },
+                "download_url": {
+                  "type": "string",
+                  "description": "download_url"
+                },
+                "_links": {
+                  "type": "object",
+                  "properties": {
+                    "git": {
+                      "type": "string",
+                      "description": "git"
+                    },
+                    "self": {
+                      "type": "string",
+                      "description": "self"
+                    },
+                    "html": {
+                      "type": "string",
+                      "description": "html"
+                    }
+                  },
+                  "description": "_links"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Repository Content",
+        "operationId": "GetRepositoryContent",
+        "description": "Get File or Folder Content from Repository",
+        "parameters": [
+          {
+            "name": "owner",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "path",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      },
+      "put": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "content": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "description": "name"
+                    },
+                    "path": {
+                      "type": "string",
+                      "description": "path"
+                    },
+                    "sha": {
+                      "type": "string",
+                      "description": "sha"
+                    },
+                    "size": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "size"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "url"
+                    },
+                    "html_url": {
+                      "type": "string",
+                      "description": "html_url"
+                    },
+                    "git_url": {
+                      "type": "string",
+                      "description": "git_url"
+                    },
+                    "download_url": {
+                      "type": "string",
+                      "description": "download_url"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "type"
+                    },
+                    "_links": {
+                      "type": "object",
+                      "properties": {
+                        "self": {
+                          "type": "string",
+                          "description": "self"
+                        },
+                        "git": {
+                          "type": "string",
+                          "description": "git"
+                        },
+                        "html": {
+                          "type": "string",
+                          "description": "html"
+                        }
+                      },
+                      "description": "_links"
+                    }
+                  },
+                  "description": "content"
+                },
+                "commit": {
+                  "type": "object",
+                  "properties": {
+                    "sha": {
+                      "type": "string",
+                      "description": "sha"
+                    },
+                    "node_id": {
+                      "type": "string",
+                      "description": "node_id"
+                    },
+                    "url": {
+                      "type": "string",
+                      "description": "url"
+                    },
+                    "html_url": {
+                      "type": "string",
+                      "description": "html_url"
+                    },
+                    "author": {
+                      "type": "object",
+                      "properties": {
+                        "date": {
+                          "type": "string",
+                          "description": "date"
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "name"
+                        },
+                        "email": {
+                          "type": "string",
+                          "description": "email"
+                        }
+                      },
+                      "description": "author"
+                    },
+                    "committer": {
+                      "type": "object",
+                      "properties": {
+                        "date": {
+                          "type": "string",
+                          "description": "date"
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "name"
+                        },
+                        "email": {
+                          "type": "string",
+                          "description": "email"
+                        }
+                      },
+                      "description": "committer"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "message"
+                    },
+                    "tree": {
+                      "type": "object",
+                      "properties": {
+                        "url": {
+                          "type": "string",
+                          "description": "url"
+                        },
+                        "sha": {
+                          "type": "string",
+                          "description": "sha"
+                        }
+                      },
+                      "description": "tree"
+                    },
+                    "parents": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "url": {
+                            "type": "string",
+                            "description": "url"
+                          },
+                          "html_url": {
+                            "type": "string",
+                            "description": "html_url"
+                          },
+                          "sha": {
+                            "type": "string",
+                            "description": "sha"
+                          }
+                        }
+                      },
+                      "description": "parents"
+                    },
+                    "verification": {
+                      "type": "object",
+                      "properties": {
+                        "verified": {
+                          "type": "boolean",
+                          "description": "verified"
+                        },
+                        "reason": {
+                          "type": "string",
+                          "description": "reason"
+                        },
+                        "signature": {
+                          "type": "string",
+                          "description": "signature"
+                        },
+                        "payload": {
+                          "type": "string",
+                          "description": "payload"
+                        }
+                      },
+                      "description": "verification"
+                    }
+                  },
+                  "description": "commit"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Update File Contents",
+        "description": "Update existing file in repository",
+        "operationId": "UpdateFileContents",
+        "parameters": [
+          {
+            "name": "owner",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "path",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "description": "message",
+                  "title": ""
+                },
+                "content": {
+                  "type": "string",
+                  "description": "content",
+                  "title": ""
+                },
+                "sha": {
+                  "type": "string",
+                  "description": "sha",
+                  "title": ""
+                },
+                "branch": {
+                  "type": "string",
+                  "description": "branch",
+                  "title": ""
+                },
+                "committer": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "description": "name"
+                    },
+                    "email": {
+                      "type": "string",
+                      "description": "email"
+                    },
+                    "author": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "description": "name"
+                        },
+                        "email": {
+                          "type": "string",
+                          "description": "email"
+                        }
+                      },
+                      "description": "author"
+                    }
+                  },
+                  "description": "committer"
+                }
+              },
+              "required": [
+                "branch",
+                "content",
+                "message",
+                "sha"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches": {}
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization"
+    }
+  },
+  "security": [
+    {
+      "api_key": []
+    }
+  ],
+  "tags": []
+}
