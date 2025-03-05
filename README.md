@@ -24,9 +24,9 @@ This flow will run whenever a link has been created, updated or deleted.  It wil
 ![image](https://github.com/user-attachments/assets/2842aafb-a86d-4519-9368-6947483beaad)
 
 ## Environment Variables
-There is an environment variables for GitHub repo and owner.
+There is an environment variables for GitHub repo, owner, name and email.
 
-![image](https://github.com/user-attachments/assets/9940b94c-cb69-43e9-b176-b4a28bf74509)
+![image](https://github.com/user-attachments/assets/68d2a422-a637-4ee4-863d-dc5b1187c464)
 
 ## GitHub custom connector
 Big thanks to Jan Vidar Elven and his post on [how to create a custom connector to GitHub](https://gotoguy.blog/2021/01/20/how-to-send-requests-to-github-api-from-power-platform-using-custom-connector).  This made the process a lot easier.
