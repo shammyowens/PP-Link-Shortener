@@ -39,7 +39,8 @@ Big thanks to Jan Vidar Elven and his post on [how to create a custom connector 
 - Create Azure Static Web App and connect it to the GitHub Repo
 - Configure Azure Static Web App with a custom domain (optional)
 - Create GitHub personal access token.  More information on how to generate a personal access token can be found [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
-- Install the solution into your Power Platform environment.  Ensure the environment variables for owner and repo are updated appropriately.
+- Install the GitHub Connector solution into your Power Platform environment.  This has the custom connector that needs to be loaded before the main solution.
+- Install the Link Shortener solution into your Power Platform environment.  Ensure the environment variables for owner and repo are updated appropriately.
 - Create a connection for the GitHub connector ensuring that the key is in format [Bearer [Token]].
 - Create some link records
 - The CI/CD actions pipeline for the Static Web App should run and update the configuration
