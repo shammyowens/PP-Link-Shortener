@@ -25,7 +25,7 @@
         window.onload = function() {
             // Get the current URL parameters
             var params = new URLSearchParams(window.location.search);
-            // Define the base URL for the iFrame
+            // Define the base URL for the iFrame.  Change appUrl as required
             var baseUrl = "https://apps.powerapps.com/play/e/default-f2ed8e92-c285-4254-9a1d-33bb7557375a/a/d34d715f-1b96-48e4-800f-eb9ad224992a?tenantId=f2ed8e92-c285-4254-9a1d-33bb7557375a";
             // Append the current parameters to the base URL
             var iframeUrl = baseUrl + (params.toString() ? "&" + params.toString() : "");
