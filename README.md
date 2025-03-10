@@ -1,5 +1,14 @@
 # PP-Link-Shortener
-This repository stores a link shortener application that uses Azure Static Web Apps and Power Apps to manage links
+This repository stores a link shortener application that uses Azure Static Web Apps and Power Apps to manage links.
+
+Using this could allow you to have a standard domain and to use folders to launch different apps e.g.
+
+https://apps.teamas.uk/Shout - launches the shoutout app
+https://apps.teamas.uk/escape - launches the escape room app
+
+Better than remembering this:
+
+https://apps.powerapps.com/play/e/default-f2ed8e92-c285-4254-9a1d-33bb7557375a/a/7f43ba52-ed3f-4cad-a96c-4fa7d4faab82?tenantId=f2ed8e92-c285-4254-9a1d-33bb7557375a&hidenavbar=true
 
 # Pre-requisites
 *Azure Subscription*<br>
