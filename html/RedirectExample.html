@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+    <style>
+        .spinner {
+            margin: 100px auto;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            text-align: center;
+            animation: rotate 2s infinite linear;
+        }
+
+        .dot1, .dot2 {
+            width: 60%;
+            height: 60%;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            background-color: #333;
+            border-radius: 100%;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        .dot2 {
+            top: auto;
+            bottom: 0;
+            animation-delay: -1s;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: scale(0); }
+            50% { transform: scale(1); }
+        }
+p {text-align: center;}
+    </style>
+    <script>
+        window.onload = function() {
+            // Get the current URL parameters
+            var params = new URLSearchParams(window.location.search);
+            // Define the base URL for redirection.  Change AppURL as required
+            var baseUrl = "https://apps.powerapps.com/play/e/default-f2ed8e92-c285-4254-9a1d-33bb7557375a/a/d34d715f-1b96-48e4-800f-eb9ad224992a?tenantId=f2ed8e92-c285-4254-9a1d-33bb7557375a";
+            // Append the current parameters to the base URL
+            var redirectUrl = baseUrl + "?" + params.toString();
+            // Redirect to the new URL
+            window.location.href = redirectUrl;
+        }
+    </script>
+</head>
+<body>
+    <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+<p style="font-family:verdana">If you are not redirected automatically, follow this <a id="redirect-link" href="#">link</a>.</p>
+    <script>
+        // Update the link href with the redirect URL
+        document.getElementById('redirect-link').href = window.location.href;
+    </script>
+</body>
+</html>
