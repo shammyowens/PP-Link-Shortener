@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Content</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 99%;
+            width: 99%;
+        }
+
+        iframe {
+            width: 99vw; /* Full viewport width */
+            height: 99vh; /* Full viewport height */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe allow="geolocation; microphone; camera" id="content-frame"></iframe>
+    <script>
+        window.onload = function() {
+            // Get the current URL parameters
+            var params = new URLSearchParams(window.location.search);
+            // Define the base URL for the iFrame
+            var baseUrl = "https://apps.powerapps.com/play/e/default-f2ed8e92-c285-4254-9a1d-33bb7557375a/a/d34d715f-1b96-48e4-800f-eb9ad224992a?tenantId=f2ed8e92-c285-4254-9a1d-33bb7557375a";
+            // Append the current parameters to the base URL
+            var iframeUrl = baseUrl + (params.toString() ? "&" + params.toString() : "");
+            // Set the iFrame src attribute
+            document.getElementById('content-frame').src = iframeUrl;
+        }
+    </script>
+</body>
+</html>
