@@ -46,3 +46,10 @@ Big thanks to Jan Vidar Elven and his post on [how to create a custom connector 
 - The CI/CD actions pipeline for the Static Web App should run and update the configuration
 - Test the short url  
 
+# HTML options
+
+If your app needs to maintain the URL in the browser bar or you require parameters to be passed through into the app there are two options for you in this repo.
+
+[iFrame](./html/iFrameExample.html) - This HTML file can be loaded into an Azure Static Web App and it will load the Power App in an iFrame and pass any parameters through.  Some functions will not work e.g. Copy function and responsiveness may be affected.  The custom URL will be maintained in the URL browser bar.
+
+[Redirect](./html/RedirectExample.html) - This HTML file can be loaded into an Azure Static Web App and it will redirect the user to the native Power Apps URL with any parameters e.g. apps.powerapps.com.  App works natively but contain over app launch is lost.
