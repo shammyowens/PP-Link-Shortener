@@ -10,7 +10,7 @@ Better than remembering this:
 
 https://apps.powerapps.com/play/e/default-f2ed8e92-c285-4254-9a1d-33bb7557375a/a/7f43ba52-ed3f-4cad-a96c-4fa7d4faab82?tenantId=f2ed8e92-c285-4254-9a1d-33bb7557375a&hidenavbar=true
 
-# Pre-requisites
+# Prerequisites
 *Azure Subscription*<br>
 You need an Azure Static Web app.  You can follow this [quickstart guide](https://learn.microsoft.com/en-us/azure/static-web-apps/get-started-portal?tabs=vanilla-javascript&pivots=github) to deploy one.
 
