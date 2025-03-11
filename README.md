@@ -3,8 +3,9 @@ This repository stores a link shortener application that uses Azure Static Web A
 
 Using this could allow you to have a standard domain and to use folders to launch different apps e.g.
 
-https://apps.teamas.uk/Shout - launches the shoutout app </br>
-https://apps.teamas.uk/escape - launches the escape room app
+https://app.teamas.uk/shout - launches the shoutout app </br>
+https://app.teamas.uk/escape - launches the escape room app</br>
+https://app.teamas.uk/github - launches this page
 
 Better than remembering this:
 
