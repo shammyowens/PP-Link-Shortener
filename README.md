@@ -62,3 +62,11 @@ If your app needs to maintain the URL in the browser bar or you require paramete
 [iFrame](./html/iFrameExample.html) - This HTML file can be loaded into an Azure Static Web App and it will load the Power App in an iFrame and pass any parameters through.  Some functions will not work e.g. Copy function and responsiveness may be affected.  The custom URL will be maintained in the URL browser bar.
 
 [Redirect](./html/RedirectExample.html) - This HTML file can be loaded into an Azure Static Web App and it will redirect the user to the native Power Apps URL with any parameters e.g. apps.powerapps.com.  App works natively but contain over app launch is lost.
+
+# Other useful links
+
+[Azure Static Web App configuration](https://learn.microsoft.com/en-us/azure/static-web-apps/configuration)
+
+[How to embed Canvas Apps](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/embed-apps-dev)
+
+
